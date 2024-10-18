@@ -1,0 +1,466 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dark-mode {
+    background-color: #121212;
+    color: #fffdfd;
+    
+  }
+  
+  .light-mode {
+    background-color: #f0f0f0;
+    color: #000000;
+  }
+  
+
+
+/* Skills Section inside About Me */
+
+.skills-grid {
+ 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  gap: 20px; /* Space between items */
+}
+
+/* Individual Skill Bar */
+.skill {
+  margin-bottom: 1rem;
+
+}
+
+.skill-name {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: inherit; /* Text color changes with dark/light mode */
+}
+
+.skill-bar {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-level {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: #fff;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 20px;
+  border-radius: 10px;
+}
+
+/* Dark Mode for Skill Bars */
+.dark-mode .skill-bar {
+  background-color: #2e2e2e;
+}
+
+.skill-level-95 {
+  width: 95%;
+  background-color: #00c09a; /* C++ */
+}
+
+.skill-level-90 {
+  width: 90%;
+  background-color: #ff6b6b; /* Other skills */
+}
+
+/* Responsive Grid for Smaller Screens */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+}
+  
+
+  /* Navbar Styles */
+  .navbar {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .navbar-left {
+    flex: 1;
+  }
+  
+  .navbar-title {
+    margin: 0;
+  }
+  
+  .navbar-title-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  /* Home Section 
+.home-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .home-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .home-section p {
+    font-size: 1.2rem;
+  } */
+  
+/* Aryan Section */
+.aryan-section {
+  text-align: center;
+  padding: 3rem;
+  background-color: inherit;
+  transition: background-color 0.3s ease;
+}
+
+.aryan-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.aryan-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: inherit; /* Inherits the color from the mode (dark/light) */
+}
+
+/* Social Links Styling */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between social icons */
+  margin-top: 1rem;
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: inherit; /* Inherit color from the mode (dark/light) */
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #f48af8; /* Color change on hover */
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .social-icon {
+  color: #f0f0f0;
+}
+
+.light-mode .social-icon {
+  color: #333;
+}
+
+/* Project Section */
+.project-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.project-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Project Grid Styling */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  gap: 40px; /* Increased gap between items */
+  padding: 1rem;
+  justify-content: center; /* Ensure cards are centered */
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 350px; /* Fixed height to ensure equal card sizes */
+  overflow: hidden;
+  justify-content: space-between; /* Ensure content is spaced evenly */
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  width: 100%;
+  height: 150px; /* Fixed height for image */
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1rem;
+}
+
+.project-content h3 {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.project-content p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Center the GitHub link */
+.github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.github-icon {
+  margin-right: 8px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Dark mode adjustments for Project Cards */
+.dark-mode .project-card {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.dark-mode .project-content p {
+  color: #ccc;
+}
+
+/* Responsive grid for smaller screens */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
+}
+
+  /* About Me Section */
+  .about-section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-section p {
+    font-size: 1.2rem;
+  }
+  
+  /* Social Section */
+  .social-section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .social-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .social-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .social-section li {
+    margin: 0.5rem 0;
+  }
+  
+  .social-section a {
+    font-size: 1.2rem;
+    color: #f48af8;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-section a:hover {
+    color: #e070e4;
+  }
+  
+  /* Hamburger Menu Icon */
+  .hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    align-items: center;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #f48af8;
+  }
+  
+  .theme-toggle {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .theme-toggle:hover {
+    color: #f48af8;
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+  
+    .nav-links.open {
+      max-height: 200px; /* Adjust based on number of links */
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .navbar-title-link {
+      font-size: 1.3rem;
+    }
+  
+    .theme-toggle {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+    .home-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    .projects-section h2,
+    .about-section h2,
+    .social-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .projects-section li,
+    .about-section p,
+    .social-section a {
+      font-size: 1rem;
+    }
+  }
+  /* Footer styling */
+.footer {
+   /* Background color as shown in the image */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Social Icons container */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between the icons */
+}
+
+/* Individual social link */
+.social-link {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #333; /* Default icon color */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Social link hover effect */
+.social-link:hover {
+  background-color: #805a82; /* Hover background color */
+  color: white; /* Icon color on hover */
+}
+
+/* Dark Mode styling for footer */
+.dark-mode .footer {
+  background-color: #121212;
+}
+
+.dark-mode .social-link {
+  background-color: #c4bbbb;
+}
+
+.dark-mode .social-link:hover {
+  background-color: #f48af8;
+}
+
+  
